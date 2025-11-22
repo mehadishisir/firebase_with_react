@@ -4,15 +4,18 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import Layout from "./layout/Layout";
 import { createBrowserRouter, RouterProvider } from "react-router";
-import Header from "./componets/Header/Header";
+
+import Home from "./componets/home/Home";
+import Login from "./componets/Login/Login";
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Layout,
     children: [
+      { index: true, path: "/", Component: Home },
       {
-        path: "/",
-        Component: Header,
+        path: "login",
+        Component: Login,
       },
     ],
   },

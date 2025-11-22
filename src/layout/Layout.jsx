@@ -1,10 +1,11 @@
-import React from "react";
+import { Outlet } from "react-router";
 import Header from "../componets/Header/Header";
 
 const Layout = () => {
   return (
     <div>
       <Header></Header>
+      <Outlet></Outlet>
     </div>
   );
 };
